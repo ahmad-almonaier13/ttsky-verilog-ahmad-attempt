@@ -13,8 +13,8 @@ It takes input voltages and treats that as the input current injection to the LI
 
 ## How to test
 
-Explain how to use your project
+Apply input current and clock and monitor the output spike and the state
 
 ## External hardware
 
-List external hardware used in your project (e.g. PMOD, LED display, etc), if any
+use an decoder and dac to convert to analog
