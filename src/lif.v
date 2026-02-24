@@ -5,7 +5,7 @@ module lif (
     input wire         clk,
     input wire         reset_n,
     output reg [7:0]   state,
-    output wire        spike,
+    output wire        spike
 );
     wire [7:0] next_state;
     reg  [7:0] threshold;
@@ -23,7 +23,7 @@ module lif (
         end
         end
         // next state logic
-        assign next_state = current + (state >> 1); 
+        assign next_state = current + (spike ? 0 : state >> 1); 
 
         // spiking logic
         assign spike = (state >= threshold);
